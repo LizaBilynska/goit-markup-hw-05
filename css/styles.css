@@ -78,6 +78,7 @@ img {
     padding: 10px 32px;
     min-width: 216px;
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order:hover, 
@@ -161,13 +162,15 @@ ul {
     padding-top: 32px;
     padding-bottom: 32px;
     display: inline-block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
+
 .header-buttons:hover, 
 .header-buttons:focus {
     color: var(--accent-text-colour);
 }
-
 
 .phone, .email {
     color: var(--light-grey-colour);
@@ -175,6 +178,7 @@ ul {
     display: flex;
     align-items: center;
     fill: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email-envelope {
@@ -241,6 +245,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -283,6 +289,11 @@ ul {
     padding-bottom: 94px;
     padding-top: 100px;
 }
+
+.works-list-link {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 .works-list-link:focus, 
 .works-list-link:hover {
@@ -488,6 +499,7 @@ ul {
     justify-content: center;
     color: var(--for-media);
     fill: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-of-clients-list:hover, 
@@ -535,6 +547,7 @@ ul {
     line-height: 1.7;
     color: var(--background-colour);
     background-color: var(--grey-colour);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .where:hover, .where:focus {
@@ -582,6 +595,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -644,6 +658,11 @@ ul {
     border-radius: 4px;
     padding: 6px 22px;
     min-width: 73px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 
 .works-list {
@@ -728,6 +747,7 @@ ul {
     width: 100%;
     height: 100%;
     background-color: rgba(48, 48, 48, 0.467);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms;
 }
 
 .modal {
@@ -739,7 +759,12 @@ ul {
     border-radius: 4px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
 }
 
 .modal-close {
@@ -758,4 +783,15 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.no-scroll {
+    overflow: hidden;
 }

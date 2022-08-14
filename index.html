@@ -36,7 +36,7 @@
         <section class="hero">
             <div class="container hero-container">
                 <h1 class="decidions">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="order">Заказать услугу</button>
+                <button type="button" class="order" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <section class="section-osobennosti">
@@ -207,9 +207,9 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-close"><svg class="modal-icon" width="18" height="18">
+            <button type="button" class="modal-close" data-modal-close><svg class="modal-icon" width="18" height="18">
                 <use href="./images/symbol-defs.svg#icon-close-black-18dp3"></use>
             </svg></button>
         </div>
@@ -218,5 +218,6 @@
     <script>
         AOS.init();
     </script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
